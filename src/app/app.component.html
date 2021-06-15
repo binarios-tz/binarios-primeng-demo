@@ -1,11 +1,11 @@
 <h2>Input Text Example</h2>
 <h5>Usermame</h5>
 <span class="p-float-label">
-  <input id="float-input" type="text" pInputText [(ngModel)]="username" />
-  <label for="float-input">Username</label>
+  <input id="username" type="text" pInputText [(ngModel)]="username" />
+  <label for="username">Username</label>
 </span>
 <h5>Password Templating</h5>
-<p-password [(ngModel)]="password">
+<p-password id="password" [(ngModel)]="password">
   <ng-template pTemplate="header">
     <h6>Pick a password</h6>
   </ng-template>
@@ -24,13 +24,14 @@
 <hr />
 <h2>Input Switch Example</h2>
 <h5>Basic</h5>
-<p-inputSwitch [(ngModel)]="checked1"></p-inputSwitch>
+<p-inputSwitch id="basic-switch" [(ngModel)]="checked1"></p-inputSwitch>
 <h5>Preselection</h5>
-<p-inputSwitch [(ngModel)]="checked2"></p-inputSwitch>
+<p-inputSwitch id="preselection-switch" [(ngModel)]="checked2"></p-inputSwitch>
 
 <hr />
 <h2>DropDown Example</h2>
 <p-dropdown
+  id="city"
   [options]="cities"
   [(ngModel)]="selectedCity"
   optionLabel="name"
@@ -40,6 +41,7 @@
 <h2>AutoComplete Example</h2>
 <h5>Dropdown and Templating</h5>
 <p-autoComplete
+  id="country"
   [(ngModel)]="selectedCountryAdvanced"
   [suggestions]="filteredCountries"
   (completeMethod)="filterCountry($event)"
@@ -56,6 +58,7 @@
 <h5>Multiple</h5>
 <span class="p-fluid">
   <p-autoComplete
+    id="multiple-countries"
     [(ngModel)]="selectedCountries"
     [suggestions]="filteredCountries"
     (completeMethod)="filterCountry($event)"
@@ -70,6 +73,7 @@
 <h5>Basic radio button</h5>
 <div class="p-field-radiobutton">
   <p-radioButton
+    id="city-radio-option1"
     name="city"
     value="Chicago"
     [(ngModel)]="city"
@@ -79,6 +83,7 @@
 </div>
 <div class="p-field-radiobutton">
   <p-radioButton
+    id="city-radio-option2"
     name="city"
     value="Los Angeles"
     [(ngModel)]="city"
@@ -88,6 +93,7 @@
 </div>
 <div class="p-field-radiobutton">
   <p-radioButton
+    id="city-radio-option3"
     name="city"
     value="New York"
     [(ngModel)]="city"
@@ -97,6 +103,7 @@
 </div>
 <div class="p-field-radiobutton">
   <p-radioButton
+    id="city-radio-option4"
     name="city"
     value="San Francisco"
     [(ngModel)]="city"
@@ -109,12 +116,13 @@
 <h2>Checkbox Example</h2>
 <h5>Basic</h5>
 <div class="p-field-checkbox">
-  <p-checkbox [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox>
+  <p-checkbox id="basic-checkbox" [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox>
   <label for="binary">{{checked}}</label>
 </div>
 <h5>Multiple</h5>
 <div class="p-field-checkbox">
   <p-checkbox
+    id="ny-checkbox"
     name="group1"
     value="New York"
     [(ngModel)]="selectedCities"
@@ -124,6 +132,7 @@
 </div>
 <div class="p-field-checkbox">
   <p-checkbox
+    id="sf-checkbox"
     name="group1"
     value="San Francisco"
     [(ngModel)]="selectedCities"
@@ -133,6 +142,7 @@
 </div>
 <div class="p-field-checkbox">
   <p-checkbox
+    id="la-checkbox"
     name="group1"
     value="Los Angeles"
     [(ngModel)]="selectedCities"
@@ -142,6 +152,7 @@
 </div>
 <div class="p-field-checkbox">
   <p-checkbox
+    id="ch-checkbox"
     name="group1"
     value="Chicago"
     [(ngModel)]="selectedCities"
@@ -152,7 +163,7 @@
 
 <hr />
 <h2>Basic Table Example</h2>
-<p-table [value]="products">
+<p-table id="table" [value]="products">
   <ng-template pTemplate="header">
     <tr>
       <th>Code</th>
