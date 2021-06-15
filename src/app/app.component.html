@@ -30,24 +30,13 @@
 
 <hr />
 <h2>DropDown Example</h2>
-<p-dropdown
-  id="city"
-  [options]="cities"
-  [(ngModel)]="selectedCity"
-  optionLabel="name"
-></p-dropdown>
+<p-dropdown id="city" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
 
 <hr />
 <h2>AutoComplete Example</h2>
 <h5>Dropdown and Templating</h5>
-<p-autoComplete
-  id="country"
-  [(ngModel)]="selectedCountryAdvanced"
-  [suggestions]="filteredCountries"
-  (completeMethod)="filterCountry($event)"
-  field="name"
-  [dropdown]="true"
->
+<p-autoComplete id="country" [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries"
+  (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
   <ng-template let-country pTemplate="item">
     <div class="country-item">
       <div>{{country.name}}</div>
@@ -72,43 +61,22 @@
 <h2>Radio button Example</h2>
 <h5>Basic radio button</h5>
 <div class="p-field-radiobutton">
-  <p-radioButton
-    id="city-radio-option1"
-    name="city"
-    value="Chicago"
-    [(ngModel)]="city"
-    inputId="city1"
-  ></p-radioButton>
+  <p-radioButton id="city-radio-option1" name="city" value="Chicago" [(ngModel)]="city" inputId="city1"></p-radioButton>
   <label for="city1">Chicago</label>
 </div>
 <div class="p-field-radiobutton">
-  <p-radioButton
-    id="city-radio-option2"
-    name="city"
-    value="Los Angeles"
-    [(ngModel)]="city"
-    inputId="city2"
-  ></p-radioButton>
+  <p-radioButton id="city-radio-option2" name="city" value="Los Angeles" [(ngModel)]="city" inputId="city2">
+  </p-radioButton>
   <label for="city2">Los Angeles</label>
 </div>
 <div class="p-field-radiobutton">
-  <p-radioButton
-    id="city-radio-option3"
-    name="city"
-    value="New York"
-    [(ngModel)]="city"
-    inputId="city3"
-  ></p-radioButton>
+  <p-radioButton id="city-radio-option3" name="city" value="New York" [(ngModel)]="city" inputId="city3">
+  </p-radioButton>
   <label for="city3">New York</label>
 </div>
 <div class="p-field-radiobutton">
-  <p-radioButton
-    id="city-radio-option4"
-    name="city"
-    value="San Francisco"
-    [(ngModel)]="city"
-    inputId="city4"
-  ></p-radioButton>
+  <p-radioButton id="city-radio-option4" name="city" value="San Francisco" [(ngModel)]="city" inputId="city4">
+  </p-radioButton>
   <label for="city4">San Francisco</label>
 </div>
 
@@ -121,43 +89,20 @@
 </div>
 <h5>Multiple</h5>
 <div class="p-field-checkbox">
-  <p-checkbox
-    id="ny-checkbox"
-    name="group1"
-    value="New York"
-    [(ngModel)]="selectedCities"
-    inputId="ny"
-  ></p-checkbox>
+  <p-checkbox id="ny-checkbox" name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
   <label for="ny">New York</label>
 </div>
 <div class="p-field-checkbox">
-  <p-checkbox
-    id="sf-checkbox"
-    name="group1"
-    value="San Francisco"
-    [(ngModel)]="selectedCities"
-    inputId="sf"
-  ></p-checkbox>
+  <p-checkbox id="sf-checkbox" name="group1" value="San Francisco" [(ngModel)]="selectedCities" inputId="sf">
+  </p-checkbox>
   <label for="sf">San Francisco</label>
 </div>
 <div class="p-field-checkbox">
-  <p-checkbox
-    id="la-checkbox"
-    name="group1"
-    value="Los Angeles"
-    [(ngModel)]="selectedCities"
-    inputId="la"
-  ></p-checkbox>
+  <p-checkbox id="la-checkbox" name="group1" value="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox>
   <label for="la">Los Angeles</label>
 </div>
 <div class="p-field-checkbox">
-  <p-checkbox
-    id="ch-checkbox"
-    name="group1"
-    value="Chicago"
-    [(ngModel)]="selectedCities"
-    inputId="ch"
-  ></p-checkbox>
+  <p-checkbox id="ch-checkbox" name="group1" value="Chicago" [(ngModel)]="selectedCities" inputId="ch"></p-checkbox>
   <label for="ch">Chicago</label>
 </div>
 
