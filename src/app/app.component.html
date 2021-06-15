@@ -1,0 +1,172 @@
+<h2>Input Text Example</h2>
+<h5>Usermame</h5>
+<span class="p-float-label">
+  <input id="float-input" type="text" pInputText [(ngModel)]="username" />
+  <label for="float-input">Username</label>
+</span>
+<h5>Password Templating</h5>
+<p-password [(ngModel)]="password">
+  <ng-template pTemplate="header">
+    <h6>Pick a password</h6>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p-divider></p-divider>
+    <p class="p-mt-2">Suggestions</p>
+    <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
+      <li>At least one lowercase</li>
+      <li>At least one uppercase</li>
+      <li>At least one numeric</li>
+      <li>Minimum 8 characters</li>
+    </ul>
+  </ng-template>
+</p-password>
+
+<hr />
+<h2>Input Switch Example</h2>
+<h5>Basic</h5>
+<p-inputSwitch [(ngModel)]="checked1"></p-inputSwitch>
+<h5>Preselection</h5>
+<p-inputSwitch [(ngModel)]="checked2"></p-inputSwitch>
+
+<hr />
+<h2>DropDown Example</h2>
+<p-dropdown
+  [options]="cities"
+  [(ngModel)]="selectedCity"
+  optionLabel="name"
+></p-dropdown>
+
+<hr />
+<h2>AutoComplete Example</h2>
+<h5>Dropdown and Templating</h5>
+<p-autoComplete
+  [(ngModel)]="selectedCountryAdvanced"
+  [suggestions]="filteredCountries"
+  (completeMethod)="filterCountry($event)"
+  field="name"
+  [dropdown]="true"
+>
+  <ng-template let-country pTemplate="item">
+    <div class="country-item">
+      <div>{{country.name}}</div>
+    </div>
+  </ng-template>
+</p-autoComplete>
+
+<h5>Multiple</h5>
+<span class="p-fluid">
+  <p-autoComplete
+    [(ngModel)]="selectedCountries"
+    [suggestions]="filteredCountries"
+    (completeMethod)="filterCountry($event)"
+    field="name"
+    [multiple]="true"
+  >
+  </p-autoComplete>
+</span>
+
+<hr />
+<h2>Radio button Example</h2>
+<h5>Basic radio button</h5>
+<div class="p-field-radiobutton">
+  <p-radioButton
+    name="city"
+    value="Chicago"
+    [(ngModel)]="city"
+    inputId="city1"
+  ></p-radioButton>
+  <label for="city1">Chicago</label>
+</div>
+<div class="p-field-radiobutton">
+  <p-radioButton
+    name="city"
+    value="Los Angeles"
+    [(ngModel)]="city"
+    inputId="city2"
+  ></p-radioButton>
+  <label for="city2">Los Angeles</label>
+</div>
+<div class="p-field-radiobutton">
+  <p-radioButton
+    name="city"
+    value="New York"
+    [(ngModel)]="city"
+    inputId="city3"
+  ></p-radioButton>
+  <label for="city3">New York</label>
+</div>
+<div class="p-field-radiobutton">
+  <p-radioButton
+    name="city"
+    value="San Francisco"
+    [(ngModel)]="city"
+    inputId="city4"
+  ></p-radioButton>
+  <label for="city4">San Francisco</label>
+</div>
+
+<hr />
+<h2>Checkbox Example</h2>
+<h5>Basic</h5>
+<div class="p-field-checkbox">
+  <p-checkbox [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox>
+  <label for="binary">{{checked}}</label>
+</div>
+<h5>Multiple</h5>
+<div class="p-field-checkbox">
+  <p-checkbox
+    name="group1"
+    value="New York"
+    [(ngModel)]="selectedCities"
+    inputId="ny"
+  ></p-checkbox>
+  <label for="ny">New York</label>
+</div>
+<div class="p-field-checkbox">
+  <p-checkbox
+    name="group1"
+    value="San Francisco"
+    [(ngModel)]="selectedCities"
+    inputId="sf"
+  ></p-checkbox>
+  <label for="sf">San Francisco</label>
+</div>
+<div class="p-field-checkbox">
+  <p-checkbox
+    name="group1"
+    value="Los Angeles"
+    [(ngModel)]="selectedCities"
+    inputId="la"
+  ></p-checkbox>
+  <label for="la">Los Angeles</label>
+</div>
+<div class="p-field-checkbox">
+  <p-checkbox
+    name="group1"
+    value="Chicago"
+    [(ngModel)]="selectedCities"
+    inputId="ch"
+  ></p-checkbox>
+  <label for="ch">Chicago</label>
+</div>
+
+<hr />
+<h2>Basic Table Example</h2>
+<p-table [value]="products">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{product.code}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.category}}</td>
+      <td>{{product.quantity}}</td>
+    </tr>
+  </ng-template>
+</p-table>
