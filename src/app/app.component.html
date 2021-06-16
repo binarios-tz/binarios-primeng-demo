@@ -1,13 +1,50 @@
-<h2>Input Text Example</h2>
-<h5>Usermame</h5>
-<span class="p-float-label">
-  <input id="username" type="text" pInputText [(ngModel)]="username" />
-  <label for="username">Username</label>
-</span>
-<h5>Password Templating</h5>
-<p-password id="password" [(ngModel)]="password">
+<h1>Binarios demo page</h1>
+<hr>
+
+<h3>Input Text Example with Reactive Form Validation Text Example</h3>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <span class="p-float-label">
+  <input id="username" type="text" pInputText  formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+  <label for="username">First name</label>
+    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+      <div *ngIf="f.firstName.errors.minlength">First Name must be at least 6 characters</div>
+    </div>
+    </span>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <span class="p-float-label">
+  <input id="username" type="text" pInputText formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+  <label for="username">Last name</label>
+    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+      <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+      <div *ngIf="f.lastName.errors.minlength">Last Name must be at least 6 characters</div>
+    </div>
+    </span>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <span class="p-float-label">
+  <input id="username" type="text" pInputText  formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+  <label for="username">Email</label>
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+    </span>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <span class="p-float-label">
+<p-password id="password"  formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  [(ngModel)]="password">
   <ng-template pTemplate="header">
-    <h6>Pick a password</h6>
   </ng-template>
   <ng-template pTemplate="footer">
     <p-divider></p-divider>
@@ -19,7 +56,18 @@
       <li>Minimum 8 characters</li>
     </ul>
   </ng-template>
+  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+    </div>
 </p-password>
+    </span>
+  </div><br>
+  <div class="form-group">
+    <button pButton  label="Register"></button>
+  </div>
+</form>
+
 
 <hr />
 <h2>Input Switch Example</h2>

@@ -16,6 +16,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TableModule } from 'primeng/table';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { TableModule } from 'primeng/table';
     HttpClientModule,
     RadioButtonModule,
     CheckboxModule,
-    TableModule
+    TableModule,
+    ReactiveFormsModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
