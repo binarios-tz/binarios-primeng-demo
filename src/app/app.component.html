@@ -7,8 +7,8 @@
 
   <div class="form-group">
     <span class="p-float-label">
-  <input id="username" type="text" pInputText  formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-  <label for="username">First name</label>
+  <input id="first-name" type="text" pInputText  formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+  <label for="first-name">First name</label>
     <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
       <div class="p-error" *ngIf="f.firstName.errors.required">First Name is required</div>
       <div class="p-error" *ngIf="f.firstName.errors.minlength">First Name must be at least 6 characters</div>
@@ -19,8 +19,8 @@
 
   <div class="form-group">
     <span class="p-float-label">
-  <input id="username" type="text" pInputText formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-  <label for="username">Last name</label>
+  <input id="last-name" type="text" pInputText formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+  <label for="last-name">Last name</label>
     <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
       <div class="p-error"  *ngIf="f.lastName.errors.required">Last Name is required</div>
       <div class="p-error" *ngIf="f.lastName.errors.minlength">Last Name must be at least 6 characters</div>
@@ -31,8 +31,8 @@
 
   <div class="form-group">
     <span class="p-float-label">
-  <input id="username" type="text" pInputText  formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-  <label for="username">Email</label>
+  <input id="email" type="text" pInputText  formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+  <label for="email">Email</label>
     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
       <div class="p-error" *ngIf="f.email.errors.required">Email is required</div>
       <div class="p-error" *ngIf="f.email.errors.email">Email must be a valid email address</div>
