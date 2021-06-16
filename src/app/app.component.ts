@@ -22,7 +22,7 @@ export class AppComponent {
 
   checked: boolean = true;
 
-  city: string;
+  city: string='Chicago';
 
   username: string;
   password: string;
