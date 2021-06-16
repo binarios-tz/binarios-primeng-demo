@@ -10,7 +10,7 @@
   <input id="username" type="text" pInputText  formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
   <label for="username">First name</label>
     <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+      <div class="p-error" *ngIf="f.firstName.errors.required">First Name is required</div>
       <div *ngIf="f.firstName.errors.minlength">First Name must be at least 6 characters</div>
     </div>
     </span>
