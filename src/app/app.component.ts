@@ -33,6 +33,8 @@ export class AppComponent {
   selectedCountryAdvanced: any[];
 
   groupedCities: SelectItemGroup[];
+
+  filteredGroups: any[];
   filteredCountries: any[];
   countries: any[];
   products: Product[];
