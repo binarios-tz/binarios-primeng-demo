@@ -64,7 +64,7 @@
     </span>
   </div><br>
   <div class="form-group">
-    <button pButton  label="Register"></button>
+    <button pButton id="register" label="Register"></button>
   </div>
 </form>
 
@@ -78,17 +78,19 @@
 
 <hr />
 <h2>DropDown Example</h2>
-<p-dropdown id="city" [showClear]="true" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Select a city">
-	<ng-template pTemplate="selectedItem">
-		<div class="country-item country-item-value" *ngIf="selectedCity">
-			<div>{{selectedCity.name}}</div>
-		</div>
-	</ng-template>
-	<ng-template let-city pTemplate="item">
-		<div class="country-item">
-			<div>{{city.name}}</div>
-		</div>
-	</ng-template></p-dropdown>
+<p-dropdown id="city" [showClear]="true" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
+  placeholder="Select a city">
+  <ng-template pTemplate="selectedItem">
+    <div class="country-item country-item-value" *ngIf="selectedCity">
+      <div>{{selectedCity.name}}</div>
+    </div>
+  </ng-template>
+  <ng-template let-city pTemplate="item">
+    <div class="country-item">
+      <div>{{city.name}}</div>
+    </div>
+  </ng-template>
+</p-dropdown>
 
 <hr />
 <h2>AutoComplete Example</h2>
