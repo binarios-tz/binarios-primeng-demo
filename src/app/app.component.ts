@@ -5,6 +5,7 @@ import { Product } from './product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectItemGroup } from "primeng/api";
 import { FilterService } from "primeng/api";
+import { PrimeNGConfig} from 'primeng/api';
 
 interface City {
   name: string;
@@ -30,6 +31,11 @@ export class AppComponent {
   checked1: boolean = false;
   checked2: boolean = true;
 
+      
+  tbchecked1: boolean = false;
+
+  tbchecked2: boolean = true;
+
   selectedCountryAdvanced: any[];
 
   groupedCities: SelectItemGroup[];
@@ -46,7 +52,8 @@ export class AppComponent {
     private countryService: CountryService,
     private productService: ProductService,
     private formBuilder: FormBuilder,
-    private filterService: FilterService
+    private filterService: FilterService,
+    private primengConfig: PrimeNGConfig
   ) {
     this.cities = [
       { name: 'New York', code: 'NY' },
@@ -58,6 +65,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    this.primengConfig.ripple = true;
     this.countryService.getCountries().then(countries => {
       this.countries = countries;
     });

@@ -214,3 +214,12 @@
 <hr />
 <h2>Button Example</h2>
 <a pButton id="google" label="Google" href="https://www.google.com"></a>
+
+<hr />
+<h2>Toggle Button Example</h2>
+<h5 id="binarios-toggleButton">Basic</h5>
+<p-toggleButton id="tb-basic" [(ngModel)]="tbchecked1" onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
+
+<h5>Customized</h5>
+<p-toggleButton id="tb-customized" [(ngModel)]="tbchecked2" onLabel="I confirm" offLabel="I reject" onIcon="pi pi-check"
+  offIcon="pi pi-times" [style]="{'width': '10em'}"></p-toggleButton>

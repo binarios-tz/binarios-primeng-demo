@@ -17,6 +17,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TableModule } from 'primeng/table';
 import { ReactiveFormsModule } from '@angular/forms';
+import {ToggleButtonModule} from 'primeng/togglebutton';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RadioButtonModule,
     CheckboxModule,
     TableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToggleButtonModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
