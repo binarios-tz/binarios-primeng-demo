@@ -3,9 +3,9 @@ import { CountryService } from './countryservice';
 import { ProductService } from './productservice';
 import { Product } from './product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SelectItemGroup } from "primeng/api";
-import { FilterService } from "primeng/api";
-import { PrimeNGConfig} from 'primeng/api';
+import { SelectItemGroup } from 'primeng/api';
+import { FilterService } from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
 interface City {
   name: string;
@@ -18,7 +18,16 @@ interface City {
   providers: [CountryService, ProductService, FilterService]
 })
 export class AppComponent {
+  val1: string;
+
+  val2: string;
+
+  val3: string;
+
+  val4: string;
+
   registerForm: FormGroup;
+
   submitted = false;
 
   checked: boolean = true;
@@ -26,12 +35,13 @@ export class AppComponent {
   city: string = 'Chicago';
 
   username: string;
+
   password: string;
 
   checked1: boolean = false;
+
   checked2: boolean = true;
 
-      
   tbchecked1: boolean = false;
 
   tbchecked2: boolean = true;
@@ -41,11 +51,15 @@ export class AppComponent {
   groupedCities: SelectItemGroup[];
 
   filteredGroups: any[];
+
   filteredCountries: any[];
+
   countries: any[];
+
   products: Product[];
 
   cities: City[];
+
   selectedCity: City;
 
   constructor(
@@ -147,9 +161,9 @@ export class AppComponent {
     for (let optgroup of this.groupedCities) {
       let filteredSubOptions = this.filterService.filter(
         optgroup.items,
-        ["label"],
+        ['label'],
         query,
-        "contains"
+        'contains'
       );
       if (filteredSubOptions && filteredSubOptions.length) {
         filteredGroups.push({

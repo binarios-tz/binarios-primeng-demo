@@ -19,6 +19,8 @@ import { TableModule } from 'primeng/table';
 import { ReactiveFormsModule } from '@angular/forms';
 import {ToggleButtonModule} from 'primeng/togglebutton';
 
+import {InputMaskModule} from 'primeng/inputmask';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     CheckboxModule,
     TableModule,
     ReactiveFormsModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    InputMaskModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
