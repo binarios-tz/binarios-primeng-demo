@@ -249,3 +249,22 @@
       </p-inputMask>
   </div>
 </div>
+
+<hr />
+<h2>KeyFilter Example</h2>
+<h5>Filtering</h5>
+<div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-4">
+        <input id="integer-filter" type="text" pInputText pKeyFilter="int" placeholder="Integers">
+    </div>
+    <div class="p-col-12 p-md-4">
+        <input id="non-space-filter" type="text" pInputText [pKeyFilter]="blockSpace" placeholder="Block space key">
+    </div>
+</div>
+
+<h5>Validation Mode</h5>
+<form #form="ngForm">
+    <label for="cc" style="display:block;margin-bottom:4px">Credit Card</label>
+    <input id="cc" type="text" name="cc" [(ngModel)]="cc" pInputText [pKeyFilter]="ccRegex" [pValidateOnly]="true" placeholder="1234-1234-1234-1234" style="margin-right: .5em">
+    <p-message severity="error" text="Not a valid number" [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'"></p-message>
+</form>

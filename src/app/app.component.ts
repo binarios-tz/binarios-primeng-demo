@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectItemGroup } from 'primeng/api';
 import { FilterService } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
+import {trigger,state,style,transition,animate} from '@angular/animations';
 
 interface City {
   name: string;
@@ -15,9 +16,33 @@ interface City {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [CountryService, ProductService, FilterService]
+  providers: [CountryService, ProductService, FilterService],
+  animations: [
+    trigger('errorState', [
+      state(
+        'hidden',
+        style({
+          opacity: 0
+        })
+      ),
+      state(
+        'visible',
+        style({
+          opacity: 1
+        })
+      ),
+      transition('visible => hidden', animate('400ms ease-in')),
+      transition('hidden => visible', animate('400ms ease-out'))
+    ])
+  ]
 })
 export class AppComponent {
+  blockSpace: RegExp = /[^\s]/;
+
+  ccRegex: RegExp = /[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
+
+  cc: string;
+
   val1: string;
 
   val2: string;

@@ -17,9 +17,11 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TableModule } from 'primeng/table';
 import { ReactiveFormsModule } from '@angular/forms';
-import {ToggleButtonModule} from 'primeng/togglebutton';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
-import {InputMaskModule} from 'primeng/inputmask';
+import { InputMaskModule } from 'primeng/inputmask';
+import { MessageModule } from 'primeng/message';
+import { KeyFilterModule } from 'primeng/keyfilter';
 
 @NgModule({
   imports: [
@@ -39,7 +41,9 @@ import {InputMaskModule} from 'primeng/inputmask';
     TableModule,
     ReactiveFormsModule,
     ToggleButtonModule,
-    InputMaskModule
+    InputMaskModule,
+    MessageModule,
+    KeyFilterModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
