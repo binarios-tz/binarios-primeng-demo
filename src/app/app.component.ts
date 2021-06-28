@@ -62,6 +62,8 @@ export class AppComponent {
 
   selectedCity: City;
 
+  slotChar: string = 'x';
+
   constructor(
     private countryService: CountryService,
     private productService: ProductService,
