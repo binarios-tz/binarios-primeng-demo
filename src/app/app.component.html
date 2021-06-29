@@ -266,5 +266,5 @@
 <form #form="ngForm">
     <label for="cc" style="display:block;margin-bottom:4px">Credit Card</label>
     <input id="cc" type="text" name="cc" [(ngModel)]="cc" pInputText [pKeyFilter]="ccRegex" [pValidateOnly]="true" placeholder="1234-1234-1234-1234" style="margin-right: .5em">
-    <p-message severity="error" text="Not a valid number" [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'"></p-message>
+    <p-message id="cc-invalid" severity="error" text="Not a valid number" [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'"></p-message>
 </form>
