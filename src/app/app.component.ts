@@ -178,6 +178,7 @@ export class AppComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
+    this.value3=this.justifyOptions[0];
   }
 
   // convenience getter for easy access to form fields
