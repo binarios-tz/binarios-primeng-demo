@@ -17,7 +17,7 @@ interface City {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   providers: [CountryService, ProductService, FilterService],
-  animations: [
+  /*animations: [
     trigger('errorState', [
       state(
         'hidden',
@@ -34,7 +34,7 @@ interface City {
       transition('visible => hidden', animate('0ms ease-in')),
       transition('hidden => visible', animate('400ms ease-out'))
     ])
-  ]
+  ]*/
 })
 export class AppComponent {
   blockSpace: RegExp = /[^\s]/;
