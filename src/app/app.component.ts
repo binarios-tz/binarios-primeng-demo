@@ -5,7 +5,7 @@ import { Product } from './product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectItemGroup } from 'primeng/api';
 import { FilterService } from 'primeng/api';
-import { PrimeNGConfig } from 'primeng/api';
+import { PrimeNGConfig,SelectItem } from 'primeng/api';
 import {trigger,state,style,transition,animate} from '@angular/animations';
 
 interface City {
@@ -17,7 +17,7 @@ interface City {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   providers: [CountryService, ProductService, FilterService],
-  /*animations: [
+  animations: [
     trigger('errorState', [
       state(
         'hidden',
@@ -31,10 +31,10 @@ interface City {
           opacity: 1
         })
       ),
-      transition('visible => hidden', animate('0ms ease-in')),
+      transition('visible => hidden', animate('400ms ease-in')),
       transition('hidden => visible', animate('400ms ease-out'))
     ])
-  ]*/
+  ]
 })
 export class AppComponent {
   blockSpace: RegExp = /[^\s]/;
@@ -89,6 +89,18 @@ export class AppComponent {
 
   slotChar: string = 'x';
 
+  stateOptions: any[];
+
+  paymentOptions: any[];
+
+  justifyOptions: any[];
+
+  value1: string = 'off';
+
+  value2: number[] = [1, 2];
+
+  value3: any;
+
   constructor(
     private countryService: CountryService,
     private productService: ProductService,
@@ -102,6 +114,23 @@ export class AppComponent {
       { name: 'London', code: 'LDN' },
       { name: 'Istanbul', code: 'IST' },
       { name: 'Paris', code: 'PRS' }
+    ];
+    this.stateOptions = [
+      { label: 'Off', value: 'off' },
+      { label: 'On', value: 'on' }
+    ];
+
+    this.paymentOptions = [
+      { name: 'Option 1', value: 1 },
+      { name: 'Option 2', value: 2 },
+      { name: 'Option 3', value: 3 }
+    ];
+
+    this.justifyOptions = [
+      { icon: 'pi pi-align-left', justify: 'Left', id: 'justify-left' },
+      { icon: 'pi pi-align-right', justify: 'Right', id: 'justify-right' },
+      { icon: 'pi pi-align-center', justify: 'Center', id: 'justify-center' },
+      { icon: 'pi pi-align-justify', justify: 'Justify', id: 'justify-justify' }
     ];
   }
 

@@ -93,18 +93,18 @@
 </p-dropdown>
 
 <h5>Advanced with Templating, Filtering and Clear Icon</h5>
-<p-dropdown id="countries" [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true"
-  filterBy="name" [showClear]="true" placeholder="Select a Country">
-  <ng-template pTemplate="selectedItem">
-    <div class="country-item country-item-value" *ngIf="selectedCountry">
-      <div>{{selectedCountry.name}}</div>
-    </div>
-  </ng-template>
-  <ng-template let-country pTemplate="item">
-    <div class="country-item">
-      <div>{{country.name}}</div>
-    </div>
-  </ng-template>
+<p-dropdown id="countries" [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name"
+	[showClear]="true" placeholder="Select a Country">
+	<ng-template pTemplate="selectedItem">
+		<div class="country-item country-item-value" *ngIf="selectedCountry">
+			<div>{{selectedCountry.name}}</div>
+		</div>
+	</ng-template>
+	<ng-template let-country pTemplate="item">
+		<div class="country-item">
+			<div>{{country.name}}</div>
+		</div>
+	</ng-template>
 </p-dropdown>
 
 <hr />
@@ -145,8 +145,7 @@
 <h2>Radio button Example</h2>
 <h5>Basic radio button</h5>
 <div class="p-field-radiobutton">
-  <p-radioButton id="city-radio-option1" name="city-radio" value="Chicago" [(ngModel)]="city" inputId="city1">
-  </p-radioButton>
+  <p-radioButton id="city-radio-option1" name="city-radio" value="Chicago" [(ngModel)]="city" inputId="city1"></p-radioButton>
   <label for="city1">Chicago</label>
 </div>
 <div class="p-field-radiobutton">
@@ -169,8 +168,7 @@
 <h2>Checkbox Example</h2>
 <h5>Basic</h5>
 <div class="p-field-checkbox">
-  <p-checkbox id="basic-checkbox" name="basic-checkbox" value="basic" [(ngModel)]="checked" binary="true"
-    inputId="binary"></p-checkbox>
+  <p-checkbox id="basic-checkbox" name="basic-checkbox" value="basic" [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox>
   <label for="binary">{{checked ? "Yes" : "No"}}</label>
 </div>
 <h5>Multiple</h5>
@@ -226,30 +224,29 @@
 <p-toggleButton id="tb-customized" [(ngModel)]="tbchecked2" onLabel="I confirm" offLabel="I reject" onIcon="pi pi-check"
   offIcon="pi pi-times" [style]="{'width': '10em'}"></p-toggleButton>
 
-<hr />
-<h2>InputMask Example</h2>
-<div class="p-grid p-fluid">
+  <hr />
+  <h2>InputMask Example</h2>
+  <div class="p-grid p-fluid">
   <div class="p-col-12 p-md-6 p-lg-4">
-    <span>Basic numeric</span>
-    <p-inputMask mask="99-999999" id="basic-input-mask" [(ngModel)]="val1" placeholder="99-999999"></p-inputMask>
+      <span>Basic numeric</span>
+      <p-inputMask mask="99-999999" id="basic-input-mask" [(ngModel)]="val1" placeholder="99-999999"></p-inputMask>
   </div>
 
   <div class="p-col-12 p-md-6 p-lg-4">
-    <span>Mixed</span>
-    <p-inputMask mask="a*9-99-a999" id="mixed-input-mask" [(ngModel)]="val2" placeholder="a*9-99-a999"></p-inputMask>
+      <span>Mixed</span>
+      <p-inputMask mask="a*9-99-a999" id="mixed-input-mask" [(ngModel)]="val2" placeholder="a*9-99-a999"></p-inputMask>
   </div>
 
   <div class="p-col-12 p-md-6 p-lg-4">
-    <span>With optional and slotChar</span>
-    <p-inputMask mask="99-99-99?-99" id="optional-input-mask" [(ngModel)]="val3" placeholder="99-99-99?-99"
-      slotChar="x"></p-inputMask>
+      <span>With optional and slotChar</span>
+      <p-inputMask mask="99-99-99?-99" id="optional-input-mask" [(ngModel)]="val3" placeholder="99-99-99?-99"
+          slotChar="x"></p-inputMask>
   </div>
 
   <div class="p-col-12 p-md-6 p-lg-4">
-    <span>With custom characterPattern (lowercase)</span>
-    <p-inputMask mask="aaa-aaa" id="lowercase-input-mask" [(ngModel)]="val4" placeholder="aaa-aaa"
-      characterPattern="[a-z]">
-    </p-inputMask>
+      <span>With custom characterPattern (lowercase)</span>
+      <p-inputMask mask="aaa-aaa" id="lowercase-input-mask" [(ngModel)]="val4" placeholder="aaa-aaa" characterPattern="[a-z]">
+      </p-inputMask>
   </div>
 </div>
 
@@ -257,18 +254,38 @@
 <h2>KeyFilter Example</h2>
 <h5>Filtering</h5>
 <div class="p-grid p-fluid">
-  <div class="p-col-12 p-md-4">
-    <input id="integer-filter" type="text" pInputText pKeyFilter="int" placeholder="Integers">
-  </div>
-  <div class="p-col-12 p-md-4">
-    <input id="non-space-filter" type="text" pInputText [pKeyFilter]="blockSpace" placeholder="Block space key">
-  </div>
+    <div class="p-col-12 p-md-4">
+        <input id="integer-filter" type="text" pInputText pKeyFilter="int" placeholder="Integers">
+    </div>
+    <div class="p-col-12 p-md-4">
+        <input id="non-space-filter" type="text" pInputText [pKeyFilter]="blockSpace" placeholder="Block space key">
+    </div>
 </div>
 
 <h5>Validation Mode</h5>
 <form #form="ngForm">
-  <label for="cc" style="display:block;margin-bottom:4px">Credit Card</label>
-  <input id="cc" type="text" name="cc" [(ngModel)]="cc" pInputText [pKeyFilter]="ccRegex" [pValidateOnly]="true" placeholder="1234-1234-1234-1234" style="margin-right: .5em">
-  <p-message id="cc-invalid" severity="error" text="Not a valid number"
-    [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'" *ngIf="form.dirty && !form.valid"></p-message>
+    <label for="cc" style="display:block;margin-bottom:4px">Credit Card</label>
+    <input id="cc" type="text" name="cc" [(ngModel)]="cc" pInputText [pKeyFilter]="ccRegex" [pValidateOnly]="true" placeholder="1234-1234-1234-1234" style="margin-right: .5em">
+    <p-message id="cc-invalid" severity="error" text="Not a valid number" [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'"></p-message>
 </form>
+
+
+
+<hr />
+<h2>SelectButton Example</h2>
+
+<h5 id="binarios-single-selection">Single Selection</h5>
+<p-selectButton id="single-selection" [options]="stateOptions" [(ngModel)]="value1" optionLabel="label"
+	optionValue="value"></p-selectButton>
+
+<h5>Multiple Selection</h5>
+<p-selectButton id="multiple-selection" [options]="paymentOptions" [(ngModel)]="value2" multiple="multiple"
+	optionLabel="name" optionValue="value"></p-selectButton>
+
+<h5>Custom Template</h5>
+<p-selectButton id="custom-selection" [options]="justifyOptions" [(ngModel)]="value3" optionLabel="icon">
+	<ng-template let-item>
+		<i [class]="item.icon" [id]="item.id"></i>
+	</ng-template>
+</p-selectButton>
+

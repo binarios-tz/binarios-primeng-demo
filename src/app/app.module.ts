@@ -23,6 +23,8 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { MessageModule } from 'primeng/message';
 import { KeyFilterModule } from 'primeng/keyfilter';
 
+import { SelectButtonModule } from 'primeng/selectbutton';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { KeyFilterModule } from 'primeng/keyfilter';
     ToggleButtonModule,
     InputMaskModule,
     MessageModule,
-    KeyFilterModule
+    KeyFilterModule,
+    SelectButtonModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
