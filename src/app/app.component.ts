@@ -31,7 +31,7 @@ interface City {
           opacity: 1
         })
       ),
-      transition('visible => hidden', animate('400ms ease-in')),
+      transition('visible => hidden', animate('0ms ease-in')),
       transition('hidden => visible', animate('400ms ease-out'))
     ])
   ]
