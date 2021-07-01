@@ -5,8 +5,7 @@ import { Product } from './product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectItemGroup } from 'primeng/api';
 import { FilterService } from 'primeng/api';
-import { PrimeNGConfig,SelectItem } from 'primeng/api';
-import {trigger,state,style,transition,animate} from '@angular/animations';
+import { PrimeNGConfig, SelectItem } from 'primeng/api';
 
 interface City {
   name: string;
@@ -16,25 +15,7 @@ interface City {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [CountryService, ProductService, FilterService],
-  animations: [
-    trigger('errorState', [
-      state(
-        'hidden',
-        style({
-          opacity: 0
-        })
-      ),
-      state(
-        'visible',
-        style({
-          opacity: 1
-        })
-      ),
-      transition('visible => hidden', animate('400ms ease-in')),
-      transition('hidden => visible', animate('400ms ease-out'))
-    ])
-  ]
+  providers: [CountryService, ProductService, FilterService]
 })
 export class AppComponent {
   blockSpace: RegExp = /[^\s]/;
@@ -178,7 +159,7 @@ export class AppComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
-    this.value3=this.justifyOptions[0];
+    this.value3 = this.justifyOptions[0];
   }
 
   // convenience getter for easy access to form fields
