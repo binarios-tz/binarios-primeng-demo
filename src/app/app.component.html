@@ -11,7 +11,7 @@
   <label for="first-name">First name</label>
     <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
       <div class="p-error" id="first-name-required" *ngIf="f.firstName.errors.required">First Name is required</div>
-      <div class="p-error" id="first-name-min" *ngIf="f.firstName.errors.minlength">First Name must be at least 6 characters</div>
+      <div class="p-error" id="first-name-invalid" *ngIf="f.firstName.errors.minlength">First Name must be at least 6 characters</div>
     </div>
     </span>
   </div>
@@ -23,7 +23,7 @@
   <label for="last-name">Last name</label>
     <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
       <div class="p-error"  id="last-name-required" *ngIf="f.lastName.errors.required">Last Name is required</div>
-      <div class="p-error" id="last-name-min" *ngIf="f.lastName.errors.minlength">Last Name must be at least 6 characters</div>
+      <div class="p-error" id="last-name-invalid" *ngIf="f.lastName.errors.minlength">Last Name must be at least 6 characters</div>
     </div>
     </span>
   </div>
@@ -58,7 +58,7 @@
   </ng-template>
   <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
       <div class="p-error" id="password-required" *ngIf="f.password.errors.required">Password is required</div>
-      <div class="p-error" id="password-min" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+      <div class="p-error" id="password-invalid" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
     </div>
 </p-password>
     </span>
