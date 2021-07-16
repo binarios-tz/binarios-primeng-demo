@@ -270,7 +270,6 @@
 </form>
 
 
-
 <hr />
 <h2>SelectButton Example</h2>
 
@@ -289,3 +288,32 @@
 	</ng-template>
 </p-selectButton>
 
+
+<hr />
+<h2>MultiSelect Example</h2>
+<h5>Basic</h5>
+<p-multiSelect id="multi-basic" [options]="cities" [(ngModel)]="selectedCities1" defaultLabel="Select a City"
+	optionLabel="name">
+</p-multiSelect>
+
+<h5>Chips</h5>
+<p-multiSelect id="multi-chips" [options]="cities" [(ngModel)]="selectedCities2" defaultLabel="Select a City"
+	optionLabel="name" display="chip"></p-multiSelect>
+
+<h5>Templating</h5>
+<p-multiSelect id="multi-templating" [options]="cities" [(ngModel)]="selectedCities3" defaultLabel="Select a City"
+	optionLabel="name" class="multiselect-custom">
+	<ng-template let-value pTemplate="selectedItems">
+		<div class="city-item city-item-value" *ngFor="let option of selectedCities3">
+			<div>{{option.name}}</div>
+		</div>
+		<div *ngIf="!selectedCities3 || selectedCities3.length === 0" class="city-placeholder">
+			Select Cities
+		</div>
+	</ng-template>
+	<ng-template let-city pTemplate="item">
+		<div class="city-item">
+			<div>{{city.name}}</div>
+		</div>
+	</ng-template>
+</p-multiSelect>

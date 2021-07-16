@@ -67,6 +67,9 @@ export class AppComponent {
   cities: City[];
 
   selectedCity: City;
+  selectedCities: string[] = [];
+
+  items: SelectItem[];
 
   slotChar: string = 'x';
 
@@ -89,6 +92,7 @@ export class AppComponent {
     private filterService: FilterService,
     private primengConfig: PrimeNGConfig
   ) {
+    this.items = [];
     this.cities = [
       { name: 'New York', code: 'NY' },
       { name: 'Rome', code: 'RM' },
