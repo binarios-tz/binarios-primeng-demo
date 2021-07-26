@@ -289,6 +289,68 @@
 </p-selectButton>
 
 
+
+<hr />
+<h2>Calendar Example</h2>
+
+<div class="p-fluid p-grid p-formgrid">
+  <div class="p-field p-col-12 p-md-4">
+      <label for="basic" id="basic">Basic</label>
+      <p-calendar inputId="basic" [(ngModel)]="date1" id="calendar_basic"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="icon">Icon</label>
+      <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" id="calendar_icon"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="disabledays">Disable Days</label>
+      <p-calendar [(ngModel)]="date5" [disabledDates]="invalidDates" [disabledDays]="[0,6]" [readonlyInput]="true"
+          inputId="disabledays" id="calendar_disable_date"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="navigators">Navigators</label>
+      <p-calendar [(ngModel)]="date6" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030"
+          inputId="navigators" id="calendar_navigators"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="time">Date and Time</label>
+      <p-calendar [(ngModel)]="date7" [showTime]="true" inputId="time" id="calendar_date_time"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="timeonly">Time Only</label>
+      <p-calendar [(ngModel)]="date8" [timeOnly]="true" inputId="timeonly" id="calendar_time_only"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="multiple">Multiple dates</label>
+      <p-calendar [(ngModel)]="dates" selectionMode="multiple" [readonlyInput]="true" inputId="multiple"
+          id="calendar_multiple_dates"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="range">Range dates</label>
+      <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"
+          id="calendar_range"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="buttonbar">Button Bar</label>
+      <p-calendar [(ngModel)]="date9" showButtonBar="true" inputId="buttonbar" id="calendar_button_bar"></p-calendar>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+      <label for="monthpicker">Month Picker</label>
+      <p-calendar [(ngModel)]="date12" view="month" dateFormat="mm/yy" [yearNavigator]="true" yearRange="2000:2030"
+          [readonlyInput]="true" inputId="monthpicker" id="calendar_month_picker"></p-calendar>
+  </div>
+
+</div>
+
 <hr />
 <h2>MultiSelect Example</h2>
 <h5>Basic</h5>

@@ -24,7 +24,9 @@ import { MessageModule } from 'primeng/message';
 import { KeyFilterModule } from 'primeng/keyfilter';
 
 import { SelectButtonModule } from 'primeng/selectbutton';
-import {MultiSelectModule} from 'primeng/multiselect';
+import { MultiSelectModule } from 'primeng/multiselect';
+
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   imports: [
@@ -48,7 +50,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     MessageModule,
     KeyFilterModule,
     SelectButtonModule,
-    MultiSelectModule
+    MultiSelectModule,
+    CalendarModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
