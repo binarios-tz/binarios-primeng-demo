@@ -28,6 +28,8 @@ import { MultiSelectModule } from 'primeng/multiselect';
 
 import { CalendarModule } from 'primeng/calendar';
 
+import { ListboxModule } from 'primeng/listbox';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { CalendarModule } from 'primeng/calendar';
     KeyFilterModule,
     SelectButtonModule,
     MultiSelectModule,
-    CalendarModule
+    CalendarModule,
+    ListboxModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

@@ -126,6 +126,10 @@ export class AppComponent {
 
   value3: any;
 
+  countriesbox: any[];
+
+  selectedCountries: any[];
+
   constructor(
     private countryService: CountryService,
     private productService: ProductService,
@@ -140,6 +144,18 @@ export class AppComponent {
       { name: 'London', code: 'LDN' },
       { name: 'Istanbul', code: 'IST' },
       { name: 'Paris', code: 'PRS' }
+    ];
+    this.countriesbox = [
+      { name: "Australia", code: "AU" },
+      { name: "Brazil", code: "BR" },
+      { name: "China", code: "CN" },
+      { name: "Egypt", code: "EG" },
+      { name: "France", code: "FR" },
+      { name: "Germany", code: "DE" },
+      { name: "India", code: "IN" },
+      { name: "Japan", code: "JP" },
+      { name: "Spain", code: "ES" },
+      { name: "United States", code: "US" }
     ];
     this.stateOptions = [
       { label: 'Off', value: 'off' },
