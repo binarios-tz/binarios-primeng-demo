@@ -387,7 +387,7 @@
 <p-listbox id="singleListbox" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [style]="{'width':'15rem'}"></p-listbox>
 
 <h5>Advanced with Templating, Filtering and Multiple Selection</h5>
-<p-listbox id="advancedListbox" [options]="countriesbox" [(ngModel)]="selectedCountries" [metaKeySelection]="false" [checkbox]="true"
+<p-listbox id="advListbox" [options]="countriesbox" [(ngModel)]="selectedCountries" [metaKeySelection]="false" [checkbox]="true"
   [filter]="true" [multiple]="true" optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'width':'15rem'}">
   <ng-template let-country pTemplate="item">
     <div class="country-item">
