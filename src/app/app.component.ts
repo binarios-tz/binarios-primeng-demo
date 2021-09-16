@@ -130,12 +130,17 @@ export class AppComponent {
 
   selectedCountries: any[];
 
+  sourceProducts: Product[];
+    
+  targetProducts: Product[];
+
   constructor(
     private countryService: CountryService,
     private productService: ProductService,
     private formBuilder: FormBuilder,
     private filterService: FilterService,
-    private primengConfig: PrimeNGConfig
+    private primengConfig: PrimeNGConfig,
+    private carService: ProductService
   ) {
     this.items = [];
     this.cities = [
@@ -249,6 +254,9 @@ export class AppComponent {
   let invalidDate = new Date();
   invalidDate.setDate(today.getDate() - 1);
   this.invalidDates = [today,invalidDate];
+
+  this.carService.getProductsSmall().then(products => this.sourceProducts = products);
+  this.targetProducts = [];
   
   }
 

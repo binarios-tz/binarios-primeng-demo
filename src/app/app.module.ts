@@ -30,6 +30,11 @@ import { CalendarModule } from 'primeng/calendar';
 
 import { ListboxModule } from 'primeng/listbox';
 
+
+import { ProductService } from './productservice';
+
+import {PickListModule} from 'primeng/picklist';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -54,9 +59,11 @@ import { ListboxModule } from 'primeng/listbox';
     SelectButtonModule,
     MultiSelectModule,
     CalendarModule,
-    ListboxModule
+    ListboxModule,
+    PickListModule
   ],
   declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [ProductService]
 })
 export class AppModule {}
