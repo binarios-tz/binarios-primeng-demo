@@ -34,6 +34,7 @@ import { ListboxModule } from 'primeng/listbox';
 import { ProductService } from './productservice';
 
 import {PickListModule} from 'primeng/picklist';
+import {PaginatorModule} from 'primeng/paginator';
 
 @NgModule({
   imports: [
@@ -60,7 +61,8 @@ import {PickListModule} from 'primeng/picklist';
     MultiSelectModule,
     CalendarModule,
     ListboxModule,
-    PickListModule
+    PickListModule,
+    PaginatorModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
