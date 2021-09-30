@@ -5,7 +5,7 @@ import { Product } from './product';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SelectItemGroup } from 'primeng/api';
 import { FilterService } from 'primeng/api';
-import { PrimeNGConfig, SelectItem } from 'primeng/api';
+import { PrimeNGConfig, SelectItem,MessageService } from 'primeng/api';
 
 interface City {
   name: string;
@@ -134,13 +134,16 @@ export class AppComponent {
     
   targetProducts: Product[];
 
+  uploadedFiles: any[] = [];
+
   constructor(
     private countryService: CountryService,
     private productService: ProductService,
     private formBuilder: FormBuilder,
     private filterService: FilterService,
     private primengConfig: PrimeNGConfig,
-    private carService: ProductService
+    private carService: ProductService,
+    private messageService: MessageService
   ) {
     this.items = [];
     this.cities = [
@@ -289,6 +292,14 @@ export class AppComponent {
 
     this.filteredCountries = filtered;
   }
+
+  onUpload(event) {
+    for(let file of event.files) {
+        this.uploadedFiles.push(file);
+    }
+
+    this.messageService.add({severity: 'info', summary: 'File Uploaded', detail: ''});
+}
 
   filterGroupedCity(event) {
     let query = event.query;

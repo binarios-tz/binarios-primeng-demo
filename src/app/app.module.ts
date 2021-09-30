@@ -32,9 +32,12 @@ import { ListboxModule } from 'primeng/listbox';
 
 
 import { ProductService } from './productservice';
+import {MessageService } from 'primeng/api';
 
 import {PickListModule} from 'primeng/picklist';
 import {PaginatorModule} from 'primeng/paginator';
+import {FileUploadModule} from 'primeng/fileupload';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   imports: [
@@ -62,10 +65,13 @@ import {PaginatorModule} from 'primeng/paginator';
     CalendarModule,
     ListboxModule,
     PickListModule,
-    PaginatorModule
+    PaginatorModule,
+    FileUploadModule,
+    ToastModule
+    
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  providers: [ProductService]
+  providers: [ProductService,MessageService]
 })
 export class AppModule {}

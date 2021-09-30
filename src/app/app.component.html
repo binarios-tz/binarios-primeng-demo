@@ -417,3 +417,25 @@
 <h1>Paginator</h1>
 
 <p-paginator id="paginator" [rows]="10" [totalRecords]="120" [rowsPerPageOptions]="[10,20,30,40]"></p-paginator>
+
+<hr />
+<h1>Upload files</h1>
+<p-toast></p-toast>
+
+<div class="card">
+    <h5>Advanced</h5>
+    <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
+            multiple="multiple" accept="image/*" maxFileSize="1000000">
+            <ng-template pTemplate="content">
+                <ul *ngIf="uploadedFiles.length">
+                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                </ul>
+            </ng-template>
+    </p-fileUpload>
+
+    <h5>Basic</h5>
+    <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onBasicUpload($event)"></p-fileUpload>
+
+    <h5>Basic with Auto</h5>
+    <p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onBasicUploadAuto($event)" [auto]="true" chooseLabel="Browse"></p-fileUpload>
+</div>
