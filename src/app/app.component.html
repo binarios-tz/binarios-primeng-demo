@@ -797,10 +797,10 @@
     url="./upload.php"
     accept="image/png, image/jpeg"
     maxFileSize="1000000"
-    (onUpload)="onBasicUpload($event)"
+    (onUpload)="onUpload($event)"
   ></p-fileUpload>
 
-  <h5>Basic with Auto</h5>
+  <h5>Multiple with Auto</h5>
   <p-fileUpload
     #fubauto
     id="auto-upload"
@@ -809,7 +809,8 @@
     url="./upload.php"
     accept=""
     maxFileSize="1000000"
-    (onUpload)="onBasicUploadAuto($event)"
+    (onUpload)="onUpload($event)"
+    multiple="multiple"
     [auto]="true"
     chooseLabel="Browse"
   ></p-fileUpload>
