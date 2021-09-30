@@ -1,73 +1,141 @@
 <h1 id="title">Binarios demo page</h1>
-<hr>
+<hr />
 
 <h3>Input Text Example with Reactive Form Validation Text Example</h3>
 
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-
   <div class="form-group">
     <span class="p-float-label">
-  <input id="first-name" type="text" pInputText  formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-  <label for="first-name">First name</label>
-    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-      <div class="p-error" id="first-name-required" *ngIf="f.firstName.errors.required">First Name is required</div>
-      <div class="p-error" id="first-name-invalid" *ngIf="f.firstName.errors.minlength">First Name must be at least 6 characters</div>
-    </div>
+      <input
+        id="first-name"
+        type="text"
+        pInputText
+        formControlName="firstName"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+      />
+      <label for="first-name">First name</label>
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div
+          class="p-error"
+          id="first-name-required"
+          *ngIf="f.firstName.errors.required"
+        >
+          First Name is required
+        </div>
+        <div
+          class="p-error"
+          id="first-name-invalid"
+          *ngIf="f.firstName.errors.minlength"
+        >
+          First Name must be at least 6 characters
+        </div>
+      </div>
     </span>
   </div>
-  <br>
+  <br />
 
   <div class="form-group">
     <span class="p-float-label">
-  <input id="last-name" type="text" pInputText formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-  <label for="last-name">Last name</label>
-    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-      <div class="p-error"  id="last-name-required" *ngIf="f.lastName.errors.required">Last Name is required</div>
-      <div class="p-error" id="last-name-invalid" *ngIf="f.lastName.errors.minlength">Last Name must be at least 6 characters</div>
-    </div>
+      <input
+        id="last-name"
+        type="text"
+        pInputText
+        formControlName="lastName"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+      />
+      <label for="last-name">Last name</label>
+      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+        <div
+          class="p-error"
+          id="last-name-required"
+          *ngIf="f.lastName.errors.required"
+        >
+          Last Name is required
+        </div>
+        <div
+          class="p-error"
+          id="last-name-invalid"
+          *ngIf="f.lastName.errors.minlength"
+        >
+          Last Name must be at least 6 characters
+        </div>
+      </div>
     </span>
   </div>
-  <br>
+  <br />
 
   <div class="form-group">
     <span class="p-float-label">
-  <input id="email" type="text" pInputText  formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-  <label for="email">Email</label>
-    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-      <div class="p-error" id="email-required" *ngIf="f.email.errors.required">Email is required</div>
-      <div class="p-error" id="email-invalid" *ngIf="f.email.errors.email">Email must be a valid email address</div>
-    </div>
+      <input
+        id="email"
+        type="text"
+        pInputText
+        formControlName="email"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+      />
+      <label for="email">Email</label>
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div
+          class="p-error"
+          id="email-required"
+          *ngIf="f.email.errors.required"
+        >
+          Email is required
+        </div>
+        <div class="p-error" id="email-invalid" *ngIf="f.email.errors.email">
+          Email must be a valid email address
+        </div>
+      </div>
     </span>
   </div>
-  <br>
+  <br />
 
   <div class="form-group">
     <span class="p-float-label">
-<p-password id="password"  formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" >
-  <ng-template pTemplate="header">
-  </ng-template>
-  <ng-template pTemplate="footer">
-    <p-divider></p-divider>
-    <p class="p-mt-2">Suggestions</p>
-    <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
-      <li>At least one lowercase</li>
-      <li>At least one uppercase</li>
-      <li>At least one numeric</li>
-      <li>Minimum 8 characters</li>
-    </ul>
-  </ng-template>
-  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-      <div class="p-error" id="password-required" *ngIf="f.password.errors.required">Password is required</div>
-      <div class="p-error" id="password-invalid" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-    </div>
-</p-password>
+      <p-password
+        id="password"
+        formControlName="password"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+      >
+        <ng-template pTemplate="header"> </ng-template>
+        <ng-template pTemplate="footer">
+          <p-divider></p-divider>
+          <p class="p-mt-2">Suggestions</p>
+          <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
+            <li>At least one lowercase</li>
+            <li>At least one uppercase</li>
+            <li>At least one numeric</li>
+            <li>Minimum 8 characters</li>
+          </ul>
+        </ng-template>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div
+            class="p-error"
+            id="password-required"
+            *ngIf="f.password.errors.required"
+          >
+            Password is required
+          </div>
+          <div
+            class="p-error"
+            id="password-invalid"
+            *ngIf="f.password.errors.minlength"
+          >
+            Password must be at least 6 characters
+          </div>
+        </div>
+      </p-password>
     </span>
-  </div><br>
+  </div>
+  <br />
   <div class="form-group">
-    <button pButton  id="register" label="Register"></button>
+    <button pButton id="register" label="Register"></button>
   </div>
 </form>
-
 
 <hr />
 <h2>Input Switch Example</h2>
@@ -78,88 +146,155 @@
 
 <hr />
 <h2>DropDown Example</h2>
-<p-dropdown id="city" [showClear]="true" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
-  placeholder="Select a city">
+<p-dropdown
+  id="city"
+  [showClear]="true"
+  [options]="cities"
+  [(ngModel)]="selectedCity"
+  optionLabel="name"
+  placeholder="Select a city"
+>
   <ng-template pTemplate="selectedItem">
     <div class="country-item country-item-value" *ngIf="selectedCity">
-      <div>{{selectedCity.name}}</div>
+      <div>{{ selectedCity.name }}</div>
     </div>
   </ng-template>
   <ng-template let-city pTemplate="item">
     <div class="country-item">
-      <div>{{city.name}}</div>
+      <div>{{ city.name }}</div>
     </div>
   </ng-template>
 </p-dropdown>
 
 <h5>Advanced with Templating, Filtering and Clear Icon</h5>
-<p-dropdown id="countries" [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name"
-	[showClear]="true" placeholder="Select a Country">
-	<ng-template pTemplate="selectedItem">
-		<div class="country-item country-item-value" *ngIf="selectedCountry">
-			<div>{{selectedCountry.name}}</div>
-		</div>
-	</ng-template>
-	<ng-template let-country pTemplate="item">
-		<div class="country-item">
-			<div>{{country.name}}</div>
-		</div>
-	</ng-template>
+<p-dropdown
+  id="countries"
+  [options]="countries"
+  [(ngModel)]="selectedCountry"
+  optionLabel="name"
+  [filter]="true"
+  filterBy="name"
+  [showClear]="true"
+  placeholder="Select a Country"
+>
+  <ng-template pTemplate="selectedItem">
+    <div class="country-item country-item-value" *ngIf="selectedCountry">
+      <div>{{ selectedCountry.name }}</div>
+    </div>
+  </ng-template>
+  <ng-template let-country pTemplate="item">
+    <div class="country-item">
+      <div>{{ country.name }}</div>
+    </div>
+  </ng-template>
 </p-dropdown>
 
 <hr />
 <h2>AutoComplete Example</h2>
 
 <h5>Dropdown and Templating</h5>
-<p-autoComplete id="country-dropdown" [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries"
-  (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
+<p-autoComplete
+  id="country-dropdown"
+  [(ngModel)]="selectedCountryAdvanced"
+  [suggestions]="filteredCountries"
+  (completeMethod)="filterCountry($event)"
+  field="name"
+  [dropdown]="true"
+>
   <ng-template let-country pTemplate="item">
     <div class="country-item">
-      <div>{{country.name}}</div>
+      <div>{{ country.name }}</div>
     </div>
   </ng-template>
 </p-autoComplete>
 
 <h5>Basic</h5>
-<p-autoComplete id="country-basic" [(ngModel)]="selectedCountry" [forceSelection]="true"
-  [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [minLength]="1">
+<p-autoComplete
+  id="country-basic"
+  [(ngModel)]="selectedCountry"
+  [forceSelection]="true"
+  [suggestions]="filteredCountries"
+  (completeMethod)="filterCountry($event)"
+  field="name"
+  [minLength]="1"
+>
 </p-autoComplete>
 
 <h5>Grouped</h5>
-<p-autoComplete id="city-grouped" [group]="true" [completeOnFocus]="true" [suggestions]="filteredGroups"
-  (completeMethod)="filterGroupedCity($event)" field="label" [multiple]="true" [dropdown]="true">
+<p-autoComplete
+  id="city-grouped"
+  [group]="true"
+  [completeOnFocus]="true"
+  [suggestions]="filteredGroups"
+  (completeMethod)="filterGroupedCity($event)"
+  field="label"
+  [multiple]="true"
+  [dropdown]="true"
+>
   <ng-template let-group pTemplate="group">
     <div class="p-d-flex p-ai-center">
-      <span>{{group.label}}</span>
+      <span>{{ group.label }}</span>
     </div>
   </ng-template>
 </p-autoComplete>
 
 <h5>Multiple</h5>
 <span class="p-fluid">
-    <p-autoComplete id="country-multiple" [(ngModel)]="selectedCountries" [completeOnFocus]="true"  [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [multiple]="true">
-    </p-autoComplete>
+  <p-autoComplete
+    id="country-multiple"
+    [(ngModel)]="selectedCountries"
+    [completeOnFocus]="true"
+    [suggestions]="filteredCountries"
+    (completeMethod)="filterCountry($event)"
+    field="name"
+    [multiple]="true"
+  >
+  </p-autoComplete>
 </span>
 
 <hr />
 <h2>Radio button Example</h2>
 <h5>Basic radio button</h5>
 <div class="p-field-radiobutton">
-  <p-radioButton id="city-radio-option1" name="city-radio" value="Chicago" [(ngModel)]="city" inputId="city1"></p-radioButton>
+  <p-radioButton
+    id="city-radio-option1"
+    name="city-radio"
+    value="Chicago"
+    [(ngModel)]="city"
+    inputId="city1"
+  ></p-radioButton>
   <label for="city1">Chicago</label>
 </div>
 <div class="p-field-radiobutton">
-  <p-radioButton id="city-radio-option2" name="city-radio" value="Los Angeles" [(ngModel)]="city" inputId="city2">
+  <p-radioButton
+    id="city-radio-option2"
+    name="city-radio"
+    value="Los Angeles"
+    [(ngModel)]="city"
+    inputId="city2"
+  >
   </p-radioButton>
   <label for="city2">Los Angeles</label>
 </div>
 <div class="p-field-radiobutton">
-  <p-radioButton id="city-radio-option3" name="city-radio" value="New York" [(ngModel)]="city" inputId="city3">
+  <p-radioButton
+    id="city-radio-option3"
+    name="city-radio"
+    value="New York"
+    [(ngModel)]="city"
+    inputId="city3"
+  >
   </p-radioButton>
   <label for="city3">New York</label>
 </div>
 <div class="p-field-radiobutton">
-  <p-radioButton id="city-radio-option4" name="city-radio" value="San Francisco" [(ngModel)]="city" inputId="city4">
+  <p-radioButton
+    id="city-radio-option4"
+    name="city-radio"
+    value="San Francisco"
+    [(ngModel)]="city"
+    inputId="city4"
+  >
   </p-radioButton>
   <label for="city4">San Francisco</label>
 </div>
@@ -168,25 +303,56 @@
 <h2>Checkbox Example</h2>
 <h5>Basic</h5>
 <div class="p-field-checkbox">
-  <p-checkbox id="basic-checkbox" name="basic-checkbox" value="basic" [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox>
-  <label for="binary">{{checked ? "Yes" : "No"}}</label>
+  <p-checkbox
+    id="basic-checkbox"
+    name="basic-checkbox"
+    value="basic"
+    [(ngModel)]="checked"
+    binary="true"
+    inputId="binary"
+  ></p-checkbox>
+  <label for="binary">{{ checked ? 'Yes' : 'No' }}</label>
 </div>
 <h5>Multiple</h5>
 <div class="p-field-checkbox">
-  <p-checkbox id="ny-checkbox" name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+  <p-checkbox
+    id="ny-checkbox"
+    name="group1"
+    value="New York"
+    [(ngModel)]="selectedCities"
+    inputId="ny"
+  ></p-checkbox>
   <label for="ny">New York</label>
 </div>
 <div class="p-field-checkbox">
-  <p-checkbox id="sf-checkbox" name="group1" value="San Francisco" [(ngModel)]="selectedCities" inputId="sf">
+  <p-checkbox
+    id="sf-checkbox"
+    name="group1"
+    value="San Francisco"
+    [(ngModel)]="selectedCities"
+    inputId="sf"
+  >
   </p-checkbox>
   <label for="sf">San Francisco</label>
 </div>
 <div class="p-field-checkbox">
-  <p-checkbox id="la-checkbox" name="group1" value="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox>
+  <p-checkbox
+    id="la-checkbox"
+    name="group1"
+    value="Los Angeles"
+    [(ngModel)]="selectedCities"
+    inputId="la"
+  ></p-checkbox>
   <label for="la">Los Angeles</label>
 </div>
 <div class="p-field-checkbox">
-  <p-checkbox id="ch-checkbox" name="group1" value="Chicago" [(ngModel)]="selectedCities" inputId="ch"></p-checkbox>
+  <p-checkbox
+    id="ch-checkbox"
+    name="group1"
+    value="Chicago"
+    [(ngModel)]="selectedCities"
+    inputId="ch"
+  ></p-checkbox>
   <label for="ch">Chicago</label>
 </div>
 
@@ -203,10 +369,10 @@
   </ng-template>
   <ng-template pTemplate="body" let-product>
     <tr>
-      <td>{{product.code}}</td>
-      <td>{{product.name}}</td>
-      <td>{{product.category}}</td>
-      <td>{{product.quantity}}</td>
+      <td>{{ product.code }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.quantity }}</td>
     </tr>
   </ng-template>
 </p-table>
@@ -218,35 +384,68 @@
 <hr />
 <h2>Toggle Button Example</h2>
 <h5 id="binarios-toggleButton">Basic</h5>
-<p-toggleButton id="tb-basic" [(ngModel)]="tbchecked1" onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
+<p-toggleButton
+  id="tb-basic"
+  [(ngModel)]="tbchecked1"
+  onIcon="pi pi-check"
+  offIcon="pi pi-times"
+></p-toggleButton>
 
 <h5>Customized</h5>
-<p-toggleButton id="tb-customized" [(ngModel)]="tbchecked2" onLabel="I confirm" offLabel="I reject" onIcon="pi pi-check"
-  offIcon="pi pi-times" [style]="{'width': '10em'}"></p-toggleButton>
+<p-toggleButton
+  id="tb-customized"
+  [(ngModel)]="tbchecked2"
+  onLabel="I confirm"
+  offLabel="I reject"
+  onIcon="pi pi-check"
+  offIcon="pi pi-times"
+  [style]="{ width: '10em' }"
+></p-toggleButton>
 
-  <hr />
-  <h2>InputMask Example</h2>
-  <div class="p-grid p-fluid">
+<hr />
+<h2>InputMask Example</h2>
+<div class="p-grid p-fluid">
   <div class="p-col-12 p-md-6 p-lg-4">
-      <span>Basic numeric</span>
-      <p-inputMask mask="99-999999" id="basic-input-mask" [(ngModel)]="val1" placeholder="99-999999"></p-inputMask>
+    <span>Basic numeric</span>
+    <p-inputMask
+      mask="99-999999"
+      id="basic-input-mask"
+      [(ngModel)]="val1"
+      placeholder="99-999999"
+    ></p-inputMask>
   </div>
 
   <div class="p-col-12 p-md-6 p-lg-4">
-      <span>Mixed</span>
-      <p-inputMask mask="a*9-99-a999" id="mixed-input-mask" [(ngModel)]="val2" placeholder="a*9-99-a999"></p-inputMask>
+    <span>Mixed</span>
+    <p-inputMask
+      mask="a*9-99-a999"
+      id="mixed-input-mask"
+      [(ngModel)]="val2"
+      placeholder="a*9-99-a999"
+    ></p-inputMask>
   </div>
 
   <div class="p-col-12 p-md-6 p-lg-4">
-      <span>With optional and slotChar</span>
-      <p-inputMask mask="99-99-99?-99" id="optional-input-mask" [(ngModel)]="val3" placeholder="99-99-99?-99"
-          slotChar="x"></p-inputMask>
+    <span>With optional and slotChar</span>
+    <p-inputMask
+      mask="99-99-99?-99"
+      id="optional-input-mask"
+      [(ngModel)]="val3"
+      placeholder="99-99-99?-99"
+      slotChar="x"
+    ></p-inputMask>
   </div>
 
   <div class="p-col-12 p-md-6 p-lg-4">
-      <span>With custom characterPattern (lowercase)</span>
-      <p-inputMask mask="aaa-aaa" id="lowercase-input-mask" [(ngModel)]="val4" placeholder="aaa-aaa" characterPattern="[a-z]">
-      </p-inputMask>
+    <span>With custom characterPattern (lowercase)</span>
+    <p-inputMask
+      mask="aaa-aaa"
+      id="lowercase-input-mask"
+      [(ngModel)]="val4"
+      placeholder="aaa-aaa"
+      characterPattern="[a-z]"
+    >
+    </p-inputMask>
   </div>
 </div>
 
@@ -254,144 +453,276 @@
 <h2>KeyFilter Example</h2>
 <h5>Filtering</h5>
 <div class="p-grid p-fluid">
-    <div class="p-col-12 p-md-4">
-        <input id="integer-filter" type="text" pInputText pKeyFilter="int" placeholder="Integers">
-    </div>
-    <div class="p-col-12 p-md-4">
-        <input id="non-space-filter" type="text" pInputText [pKeyFilter]="blockSpace" placeholder="Block space key">
-    </div>
+  <div class="p-col-12 p-md-4">
+    <input
+      id="integer-filter"
+      type="text"
+      pInputText
+      pKeyFilter="int"
+      placeholder="Integers"
+    />
+  </div>
+  <div class="p-col-12 p-md-4">
+    <input
+      id="non-space-filter"
+      type="text"
+      pInputText
+      [pKeyFilter]="blockSpace"
+      placeholder="Block space key"
+    />
+  </div>
 </div>
 
 <h5>Validation Mode</h5>
 <form #form="ngForm">
-    <label for="cc" style="display:block;margin-bottom:4px">Credit Card</label>
-    <input id="cc" type="text" name="cc" [(ngModel)]="cc" pInputText [pKeyFilter]="ccRegex" [pValidateOnly]="true" placeholder="1234-1234-1234-1234" style="margin-right: .5em">
-    <p-message id="cc-invalid" severity="error" text="Not a valid number" *ngIf="form.dirty && !form.valid" [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'"></p-message>
+  <label for="cc" style="display:block;margin-bottom:4px">Credit Card</label>
+  <input
+    id="cc"
+    type="text"
+    name="cc"
+    [(ngModel)]="cc"
+    pInputText
+    [pKeyFilter]="ccRegex"
+    [pValidateOnly]="true"
+    placeholder="1234-1234-1234-1234"
+    style="margin-right: .5em"
+  />
+  <p-message
+    id="cc-invalid"
+    severity="error"
+    text="Not a valid number"
+    *ngIf="form.dirty && !form.valid"
+    [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'"
+  ></p-message>
 </form>
-
 
 <hr />
 <h2>SelectButton Example</h2>
 
 <h5 id="binarios-single-selection">Single Selection</h5>
-<p-selectButton id="single-selection" [options]="stateOptions" [(ngModel)]="value1" optionLabel="label"
-	optionValue="value"></p-selectButton>
+<p-selectButton
+  id="single-selection"
+  [options]="stateOptions"
+  [(ngModel)]="value1"
+  optionLabel="label"
+  optionValue="value"
+></p-selectButton>
 
 <h5>Multiple Selection</h5>
-<p-selectButton id="multiple-selection" [options]="paymentOptions" [(ngModel)]="value2" multiple="multiple"
-	optionLabel="name" optionValue="value"></p-selectButton>
+<p-selectButton
+  id="multiple-selection"
+  [options]="paymentOptions"
+  [(ngModel)]="value2"
+  multiple="multiple"
+  optionLabel="name"
+  optionValue="value"
+></p-selectButton>
 
 <h5>Custom Template</h5>
-<p-selectButton id="custom-selection" [options]="justifyOptions" [(ngModel)]="value3" optionLabel="icon">
-	<ng-template let-item>
-		<i [class]="item.icon" [id]="item.id"></i>
-	</ng-template>
+<p-selectButton
+  id="custom-selection"
+  [options]="justifyOptions"
+  [(ngModel)]="value3"
+  optionLabel="icon"
+>
+  <ng-template let-item>
+    <i [class]="item.icon" [id]="item.id"></i>
+  </ng-template>
 </p-selectButton>
-
-
 
 <hr />
 <h2>Calendar Example</h2>
 
 <div class="p-fluid p-grid p-formgrid">
   <div class="p-field p-col-12 p-md-4">
-      <label for="basic" id="basic">Basic</label>
-      <p-calendar inputId="basic" [(ngModel)]="date1" id="calendar_basic"></p-calendar>
+    <label for="basic" id="basic">Basic</label>
+    <p-calendar
+      inputId="basic"
+      [(ngModel)]="date1"
+      id="calendar_basic"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="icon">Icon</label>
-      <p-calendar [(ngModel)]="date3" [showIcon]="true" inputId="icon" id="calendar_icon"></p-calendar>
+    <label for="icon">Icon</label>
+    <p-calendar
+      [(ngModel)]="date3"
+      [showIcon]="true"
+      inputId="icon"
+      id="calendar_icon"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="disabledays">Disable Days</label>
-      <p-calendar [(ngModel)]="date5" [disabledDates]="invalidDates" [disabledDays]="[0,6]" [readonlyInput]="true"
-          inputId="disabledays" id="calendar_disable_date"></p-calendar>
+    <label for="disabledays">Disable Days</label>
+    <p-calendar
+      [(ngModel)]="date5"
+      [disabledDates]="invalidDates"
+      [disabledDays]="[0, 6]"
+      [readonlyInput]="true"
+      inputId="disabledays"
+      id="calendar_disable_date"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="navigators">Navigators</label>
-      <p-calendar [(ngModel)]="date6" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030"
-          inputId="navigators" id="calendar_navigators"></p-calendar>
+    <label for="navigators">Navigators</label>
+    <p-calendar
+      [(ngModel)]="date6"
+      [monthNavigator]="true"
+      [yearNavigator]="true"
+      yearRange="2000:2030"
+      inputId="navigators"
+      id="calendar_navigators"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="time">Date and Time</label>
-      <p-calendar [(ngModel)]="date7" [showTime]="true" inputId="time" id="calendar_date_time"></p-calendar>
+    <label for="time">Date and Time</label>
+    <p-calendar
+      [(ngModel)]="date7"
+      [showTime]="true"
+      inputId="time"
+      id="calendar_date_time"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="timeonly">Time Only</label>
-      <p-calendar [(ngModel)]="date8" [timeOnly]="true" inputId="timeonly" id="calendar_time_only"></p-calendar>
+    <label for="timeonly">Time Only</label>
+    <p-calendar
+      [(ngModel)]="date8"
+      [timeOnly]="true"
+      inputId="timeonly"
+      id="calendar_time_only"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="multiple">Multiple dates</label>
-      <p-calendar [(ngModel)]="dates" selectionMode="multiple" [readonlyInput]="true" inputId="multiple"
-          id="calendar_multiple_dates"></p-calendar>
+    <label for="multiple">Multiple dates</label>
+    <p-calendar
+      [(ngModel)]="dates"
+      selectionMode="multiple"
+      [readonlyInput]="true"
+      inputId="multiple"
+      id="calendar_multiple_dates"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="range">Range dates</label>
-      <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"
-          id="calendar_range"></p-calendar>
+    <label for="range">Range dates</label>
+    <p-calendar
+      [(ngModel)]="rangeDates"
+      selectionMode="range"
+      [readonlyInput]="true"
+      inputId="range"
+      id="calendar_range"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="buttonbar">Button Bar</label>
-      <p-calendar [(ngModel)]="date9" showButtonBar="true" inputId="buttonbar" id="calendar_button_bar"></p-calendar>
+    <label for="buttonbar">Button Bar</label>
+    <p-calendar
+      [(ngModel)]="date9"
+      showButtonBar="true"
+      inputId="buttonbar"
+      id="calendar_button_bar"
+    ></p-calendar>
   </div>
 
   <div class="p-field p-col-12 p-md-4">
-      <label for="monthpicker">Month Picker</label>
-      <p-calendar [(ngModel)]="date12" view="month" dateFormat="mm/yy" [yearNavigator]="true" yearRange="2000:2030"
-          [readonlyInput]="true" inputId="monthpicker" id="calendar_month_picker"></p-calendar>
+    <label for="monthpicker">Month Picker</label>
+    <p-calendar
+      [(ngModel)]="date12"
+      view="month"
+      dateFormat="mm/yy"
+      [yearNavigator]="true"
+      yearRange="2000:2030"
+      [readonlyInput]="true"
+      inputId="monthpicker"
+      id="calendar_month_picker"
+    ></p-calendar>
   </div>
-
 </div>
 
 <hr />
 <h2>MultiSelect Example</h2>
 <h5>Basic</h5>
-<p-multiSelect id="multi-basic" [options]="cities" [(ngModel)]="selectedCities1" defaultLabel="Select a City"
-	optionLabel="name">
+<p-multiSelect
+  id="multi-basic"
+  [options]="cities"
+  [(ngModel)]="selectedCities1"
+  defaultLabel="Select a City"
+  optionLabel="name"
+>
 </p-multiSelect>
 
 <h5>Chips</h5>
-<p-multiSelect id="multi-chips" [options]="cities" [(ngModel)]="selectedCities2" defaultLabel="Select a City"
-	optionLabel="name" display="chip"></p-multiSelect>
+<p-multiSelect
+  id="multi-chips"
+  [options]="cities"
+  [(ngModel)]="selectedCities2"
+  defaultLabel="Select a City"
+  optionLabel="name"
+  display="chip"
+></p-multiSelect>
 
 <h5>Templating</h5>
-<p-multiSelect id="multi-templating" [options]="cities" [(ngModel)]="selectedCities3" defaultLabel="Select a City"
-	optionLabel="name" class="multiselect-custom">
-	<ng-template let-value pTemplate="selectedItems">
-		<div class="city-item city-item-value" *ngFor="let option of selectedCities3">
-			<div>{{option.name}}</div>
-		</div>
-		<div *ngIf="!selectedCities3 || selectedCities3.length === 0" class="city-placeholder">
-			Select Cities
-		</div>
-	</ng-template>
-	<ng-template let-city pTemplate="item">
-		<div class="city-item">
-			<div>{{city.name}}</div>
-		</div>
-	</ng-template>
+<p-multiSelect
+  id="multi-templating"
+  [options]="cities"
+  [(ngModel)]="selectedCities3"
+  defaultLabel="Select a City"
+  optionLabel="name"
+  class="multiselect-custom"
+>
+  <ng-template let-value pTemplate="selectedItems">
+    <div
+      class="city-item city-item-value"
+      *ngFor="let option of selectedCities3"
+    >
+      <div>{{ option.name }}</div>
+    </div>
+    <div
+      *ngIf="!selectedCities3 || selectedCities3.length === 0"
+      class="city-placeholder"
+    >
+      Select Cities
+    </div>
+  </ng-template>
+  <ng-template let-city pTemplate="item">
+    <div class="city-item">
+      <div>{{ city.name }}</div>
+    </div>
+  </ng-template>
 </p-multiSelect>
-
 
 <hr />
 <h2>listBox Example</h2>
 <h5>Single</h5>
-<p-listbox id="singleListbox" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [style]="{'width':'15rem'}"></p-listbox>
+<p-listbox
+  id="singleListbox"
+  [options]="cities"
+  [(ngModel)]="selectedCity"
+  optionLabel="name"
+  [style]="{ width: '15rem' }"
+></p-listbox>
 
 <h5>Advanced with Templating, Filtering and Multiple Selection</h5>
-<p-listbox id="multipleListbox" [options]="countriesbox" [(ngModel)]="selectedCountries" [metaKeySelection]="false" [checkbox]="true"
-  [filter]="true" [multiple]="true" optionLabel="name" [listStyle]="{'max-height':'250px'}" [style]="{'width':'15rem'}">
+<p-listbox
+  id="multipleListbox"
+  [options]="countriesbox"
+  [(ngModel)]="selectedCountries"
+  [metaKeySelection]="false"
+  [checkbox]="true"
+  [filter]="true"
+  [multiple]="true"
+  optionLabel="name"
+  [listStyle]="{ 'max-height': '250px' }"
+  [style]="{ width: '15rem' }"
+>
   <ng-template let-country pTemplate="item">
     <div class="country-item">
-      <div>{{country.name}}</div>
+      <div>{{ country.name }}</div>
     </div>
   </ng-template>
 </p-listbox>
@@ -399,43 +730,87 @@
 <hr />
 <h1>PickList</h1>
 
-<p-pickList id="picklist" [source]="sourceProducts" [target]="targetProducts" sourceHeader="Available" targetHeader="Selected" dragdrop="true"
-    [responsive]="true" [sourceStyle]="{'height':'300px'}" [targetStyle]="{'height':'300px'}" filterBy="name"
-    sourceFilterPlaceholder="Search by name" targetFilterPlaceholder="Search by name">
-    <ng-template let-product pTemplate="item">
-        <div class="product-item">
-            <div class="product-list-detail">
-                <h5 class="p-mb-2">{{product.name}}</h5>
-                <i class="pi pi-tag product-category-icon"></i>
-                <span class="product-category">{{product.category}}</span>
-            </div>
-        </div>
-    </ng-template>
+<p-pickList
+  id="picklist"
+  [source]="sourceProducts"
+  [target]="targetProducts"
+  sourceHeader="Available"
+  targetHeader="Selected"
+  dragdrop="true"
+  [responsive]="true"
+  [sourceStyle]="{ height: '300px' }"
+  [targetStyle]="{ height: '300px' }"
+  filterBy="name"
+  sourceFilterPlaceholder="Search by name"
+  targetFilterPlaceholder="Search by name"
+>
+  <ng-template let-product pTemplate="item">
+    <div class="product-item">
+      <div class="product-list-detail">
+        <h5 class="p-mb-2">{{ product.name }}</h5>
+        <i class="pi pi-tag product-category-icon"></i>
+        <span class="product-category">{{ product.category }}</span>
+      </div>
+    </div>
+  </ng-template>
 </p-pickList>
 
 <hr />
 <h1>Paginator</h1>
 
-<p-paginator id="paginator" [rows]="10" [totalRecords]="120" [rowsPerPageOptions]="[10,20,30,40]"></p-paginator>
+<p-paginator
+  id="paginator"
+  [rows]="10"
+  [totalRecords]="120"
+  [rowsPerPageOptions]="[10, 20, 30, 40]"
+></p-paginator>
 
 <hr />
 <h1>Upload files</h1>
 <p-toast></p-toast>
 
 <div class="card">
-    <h5>Advanced</h5>
-    <p-fileUpload id="advanced-upload" name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
-            multiple="multiple" accept="image/*" maxFileSize="1000000">
-            <ng-template pTemplate="content">
-                <ul *ngIf="uploadedFiles.length">
-                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
-                </ul>
-            </ng-template>
-    </p-fileUpload>
+  <h5>Advanced</h5>
+  <p-fileUpload
+    id="advanced-upload"
+    name="demo[]"
+    url="./upload.php"
+    (onUpload)="onUpload($event)"
+    multiple="multiple"
+    accept="image/*"
+    maxFileSize="1000000"
+  >
+    <ng-template pTemplate="content">
+      <ul *ngIf="uploadedFiles.length">
+        <li *ngFor="let file of uploadedFiles">
+          {{ file.name }} - {{ file.size }} bytes
+        </li>
+      </ul>
+    </ng-template>
+  </p-fileUpload>
 
-    <h5>Basic</h5>
-    <p-fileUpload id="basic-upload" mode="basic" name="demo[]" url="./upload.php" accept="image/png, image/jpeg" maxFileSize="1000000" (onUpload)="onBasicUpload($event)"></p-fileUpload>
+  <h5>Basic</h5>
+  <p-fileUpload
+    id="basic-upload"
+    mode="basic"
+    name="demo[]"
+    url="./upload.php"
+    accept="image/png, image/jpeg"
+    maxFileSize="1000000"
+    (onUpload)="onBasicUpload($event)"
+  ></p-fileUpload>
 
-    <h5>Basic with Auto</h5>
-    <p-fileUpload #fubauto id="auto-upload" mode="basic" name="demo[]" url="./upload.php" accept="" maxFileSize="1000000" (onUpload)="onBasicUploadAuto($event)" [auto]="true" chooseLabel="Browse"></p-fileUpload>
+  <h5>Basic with Auto</h5>
+  <p-fileUpload
+    #fubauto
+    id="auto-upload"
+    mode="basic"
+    name="demo[]"
+    url="./upload.php"
+    accept=""
+    maxFileSize="1000000"
+    (onUpload)="onBasicUploadAuto($event)"
+    [auto]="true"
+    chooseLabel="Browse"
+  ></p-fileUpload>
 </div>
