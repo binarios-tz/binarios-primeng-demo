@@ -298,7 +298,7 @@ export class AppComponent {
         this.uploadedFiles.push(file);
     }
 
-    this.messageService.add({severity: 'info', summary: 'File Uploaded', detail: ''});
+    this.messageService.add({severity: 'info', summary: 'File Uploaded', detail: '', id: ''});
 }
 
   filterGroupedCity(event) {
