@@ -434,8 +434,8 @@
     </p-fileUpload>
 
     <h5>Basic</h5>
-    <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onBasicUpload($event)"></p-fileUpload>
+    <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/png, image/jpeg" maxFileSize="1000000" (onUpload)="onBasicUpload($event)"></p-fileUpload>
 
     <h5>Basic with Auto</h5>
-    <p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onBasicUploadAuto($event)" [auto]="true" chooseLabel="Browse"></p-fileUpload>
+    <p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="*/*" maxFileSize="1000000" (onUpload)="onBasicUploadAuto($event)" [auto]="true" chooseLabel="Browse"></p-fileUpload>
 </div>
